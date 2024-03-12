@@ -26,12 +26,12 @@ This Python script is designed to provide various PVT (Pressure-Volume-Temperatu
 The script can be imported into other Python programs or used interactively for PVT analysis. Below is an example of how to use the functions:
 
 ```python
-import pvtprops
+import pvtprops as pvt
 
 # Example usage of critical properties calculation
 sg_gas = 0.7
-Ppc = pvtprops_analysis.critical_pressure_Sutton(sg_gas)
-Tpc = pvtprops_analysis.critical_temperature_Sutton(sg_gas)
+Ppc = pvt.critical_pressure_Sutton(sg_gas)
+Tpc = pvt.critical_temperature_Sutton(sg_gas)
 print("Critical Pressure:", Ppc)
 print("Critical Temperature:", Tpc)
 
@@ -39,8 +39,8 @@ print("Critical Temperature:", Tpc)
 CO2 = 0.05
 H2S = 0.03
 N2 = 0.02
-T_corrected = pvtprops_analysis.carr_kobayashi_temperature(sg_gas, CO2, H2S, N2)
-P_corrected = pvtprops_analysis.carr_kobayashi_pressure(sg_gas, CO2, H2S, N2)
+T_corrected = pvt.carr_kobayashi_temperature(sg_gas, CO2, H2S, N2)
+P_corrected = pvt.carr_kobayashi_pressure(sg_gas, CO2, H2S, N2)
 print("Corrected Critical Pressure:", P_corrected)
 print("Corrected Critical Temperature:", T_corrected)
 
@@ -48,11 +48,11 @@ print("Corrected Critical Temperature:", T_corrected)
 P = 2000 # Pressure in psia
 T = 150 # Temperature in Fahrenheit
 method = "WichertAziz"
-V = pvtprops_analysis.redlich_kwong_eos(P, T, sg_gas, CO2, H2S, method, N2)
+V = pvt.redlich_kwong_eos(P, T, sg_gas, CO2, H2S, method, N2)
 print("Gas Volume (Redlich-Kwong EOS):", V)
 
 # Example usage of Lee-Gonzales-Eakin viscosity calculation
-viscosity = pvtprops_analysis.Lee_Gonzales_Eakin(P, T, sg_gas, CO2, H2S, method, N2)
+viscosity = pvt.Lee_Gonzales_Eakin(P, T, sg_gas, CO2, H2S, method, N2)
 print("Viscosity (Lee-Gonzales-Eakin):", viscosity)
 ```
 
