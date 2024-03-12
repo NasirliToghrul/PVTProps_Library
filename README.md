@@ -1,4 +1,4 @@
-# PVTProps Analysis
+# PVTProps
 
 This Python script is designed to provide various PVT (Pressure-Volume-Temperature) properties and calculations relevant to hydrocarbon gases. It includes functions to compute critical properties, corrected critical properties, and viscosity using different methods such as Sutton, Carr-Kobayashi, Wichert-Aziz, and Lee-Gonzales-Eakin. These properties and calculations are essential in the analysis and modeling of gas reservoirs and their behavior under different conditions.
 
@@ -26,7 +26,7 @@ This Python script is designed to provide various PVT (Pressure-Volume-Temperatu
 The script can be imported into other Python programs or used interactively for PVT analysis. Below is an example of how to use the functions:
 
 ```python
-import pvtprops_analysis
+import pvtprops
 
 # Example usage of critical properties calculation
 sg_gas = 0.7
